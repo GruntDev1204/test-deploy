@@ -1,0 +1,79 @@
+.body {
+  @include setSize(100%, 100%);
+  .slide-container {
+    @include setSize(100%, 100%);
+    overflow: hidden;
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      @include setCenterColumn();
+    }
+
+    video {
+      @include setSize(600px, 100%);
+      background-color: #242628;
+      border-radius: 20px;
+    }
+  }
+  .alert-form {
+    background-color: #242628;
+    margin-top: 50px;
+    @include setCenterColumn;
+    @include setSize(100%, 100%);
+    .row{
+        @include setSize(100%, 100%);
+    }
+  }
+  .alert-card{
+    background-color: #1c1c1d;
+    color: #ffffff ;
+    margin-top: 50px;
+    cursor: pointer;
+    @include setCenterColumn;
+    @include setSize(100%, 100%);
+    .row{
+        @include setSize(100%, 100%);
+    }
+  }
+}
+
+.form-login{
+  background-color: #323231 !important;
+  color: white !important;
+  cursor: pointer;
+}
+
+.card-content{
+  @include setPadding(10px);
+  background: linear-gradient(to right top, #fc6c8f, #ff9a8b, #d76d97, #f18dab);
+  // border: 1px solid #0ad8fc;
+  color: #000000;
+  font-weight: 800;
+  .header-card{
+    @include setSize(auto, 100%);
+    margin-bottom: 20px;
+  }
+
+  .body-card{
+    @include setSize(auto, 100%);
+    margin-bottom: 20px;
+  }
+  
+  img{
+    @include setSize(300px, 100%);
+    border-radius: 10px;
+  }
+  &:hover{
+    transition:  all 0.5s ease-in-out;
+    background: linear-gradient(to left bottom, #fc6c8f, #ff9a8b, #d76d97, #f18dab);
+  }
+}
+
+.flex-col-center{
+  @include setCenterColumn;
+  justify-content: flex-start;
+}
