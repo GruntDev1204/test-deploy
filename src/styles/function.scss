@@ -40,8 +40,8 @@
   @else {
       padding: $top $right $bottom $left;
   }
-
 }
+
 
 @mixin setPadding($option : true, $top: null, $right: null, $bottom: null, $left: null) {
   @if(option==true) {

@@ -1,10 +1,23 @@
+import { useState } from "react"
+
 export default function Popular() {
+
+ const [effect, effectSet] = useState<boolean>(false)
+
+ const active = () =>{
+   effectSet(true)
+
+   setTimeout(() =>{
+     effectSet(false)
+   }, 1500)
+ }
+
   return (
-    <div className="alert alert-card">
+    <div className={`alert alert-card mt-5 ${effect ? "effect-fan" : ""}`}>
       <div className="row mt-4 mb-2">
         <div className="col medium">
           <h3 className=" mb-3 title">
-            <i className="fa-solid fa-square-up-right"></i> Popular
+            <i className="fa-solid fa-square-up-right" onClick={active}></i> Popular
           </h3>
         </div>
       </div>

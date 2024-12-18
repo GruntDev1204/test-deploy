@@ -13,7 +13,7 @@ interface FirebaseConfig {
 }
 
 const firebaseConfig: FirebaseConfig = {
-  apiKey: "xxx-eUhv_9YqIcwA9dIE",
+  apiKey: "xxx-xxxxxxxx",
   authDomain: "xxx",
   projectId: "xxx",
   storageBucket: "xxx.appspot.com",

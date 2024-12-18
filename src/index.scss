@@ -3,6 +3,7 @@
 @import "./styles/amination.scss";
 @import "./styles/header.scss";
 @import "./styles/body.scss";
+@import "./styles/footer.scss";
 @import url("https://fonts.google.com/specimen/Poppins");
 
 html,
@@ -107,14 +108,13 @@ section {
   display: block;
 }
 body {
-  background:  linear-gradient(to right top,pink,#ffb86c);
-  color: #33335e;
+  background: #f07886;
+  color: #242628;
   line-height: 1;
+  font-family: "Poppins", sans-serif;
   overflow-x: hidden;
-  // font-family: "Inter", sans-serif;
-  font-family: 'Poppins', sans-serif;
-
 }
+
 ol,
 ul {
   list-style: none;
@@ -159,47 +159,47 @@ a {
   font-size: 20px;
 }
 
-.flex-end{
-    display: flex;
-    justify-content: flex-end;
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .button {
-	@include setPadding(false, 7px, null, null, null);
-	border-radius: 5px;
-	background: #333333;
-	color: #ffffff;
-	border: 1px solid;
-	&:hover {
-	  background-color: #ffffff;
-	  color: #131212;
-	}
+  @include setPadding(false, 7px, null, null, null);
+  border-radius: 5px;
+  background: #333333;
+  color: #ffffff;
+  border: 1px solid;
+  &:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
 }
 
-a{
+a {
   all: unset;
   cursor: pointer;
-  &:hover{
-    all : unset;
+  &:hover {
+    all: unset;
   }
 }
-.link{
-  &:hover{
-    color :aqua !important;
+.link {
+  &:hover {
+    color: aqua !important;
   }
 }
 
-.option-button{
+.option-button {
   @include setPadding(false, 10px, null, null, null);
   border-radius: 50%;
-  @include setFixedPosition(null , 19% , null , null );
+  @include setFixedPosition(null, 100px, 100px, null);
 }
 
-.flex-center{
+.flex-center {
   @include setCenterRow;
-  gap : 10px;
- i:hover{
-  color: #ffffff;
-  animation: rotateFan 0.5s ease-in-out infinite;
- }
+  gap: 10px;
+  i:hover {
+    color: #ffffff;
+    animation: rotateFan 0.5s ease-in-out infinite;
+  }
 }

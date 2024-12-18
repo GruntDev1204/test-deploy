@@ -3,13 +3,13 @@ import baseApi from "./assets/api/baseApi"
 import IncidentAPI from "./components/incident/IncidentAPI"
 import Loading from "./components/Loading"
 import Header from "./components/Header"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"
 import Body from "./components/Body"
 import Login from "./components/body/auth/Login"
 import Home from "./components/body/Home"
-import { BrowserRouter } from 'react-router-dom'
 import SignUp from "./components/body/auth/Signup"
-
+import Footer from "./components/Footer"
+import Auth from "./components/Auth"
 
 function App() {
   const [isCheckApi, setIsCheckApi] = useState<boolean>(false)
@@ -18,13 +18,16 @@ function App() {
   const startUp = () => {
     setTimeout(() => {
       setIsLoading(false)
-    }, 5000)
+    }, 3000)
   }
 
   useEffect(() => {
     startUp()
     checkApi()
   }, [])
+
+  const location = useLocation();
+  const isAuthRoute = location.pathname.startsWith("/auth");
 
   const checkApi = async () => {
     try {
@@ -44,17 +47,17 @@ function App() {
         <IncidentAPI />
       ) : (
         <>
-          <BrowserRouter>
-            <Header/>
+            <Header />
             <Routes>
-              <Route path="/" element={<Body />}>
-                <Route path="" element={<Home />} />
-
+              <Route path="/auth" element={<Auth />}>
                 <Route path="login" element={<Login />} />
                 <Route path="sign-up" element={<SignUp />} />
               </Route>
+              <Route path="/" element={<Body />}>
+                <Route path="" element={<Home />} />
+              </Route>
             </Routes>
-        </BrowserRouter>
+            {!isAuthRoute && <Footer />}{" "}
         </>
       )}
     </>

@@ -9,7 +9,7 @@ export default function SignUp() {
   }
 
   return (
-    <div className="alert alert-form form-login mt-5">
+    <div className="alert alert-form form-login">
       <div className="row mt-4 mb-2">
         <div className="col medium">
           <h3 className="text-center mb-3 title">
@@ -42,14 +42,14 @@ export default function SignUp() {
             <input type="text" className="form-control mb-4" />
           </div>
 
-          <small className="form-text text-muted mt-5 text-center flex-center">
+          <small className="form-text text-muted mt-5 text-center flex-center mb-5">
             We will use the information below to create an account for you! {" "}
             <i className="fa-solid fa-circle-chevron-right medium" title="continute"  onClick={getContinute}></i>
           </small>
 
-          {continute ? (
+          {continute ? ( 
             <>
-              <div className="form-group mt-2 " >
+              <div className="form-group mt-2 ">
                 <label className="mb-2">
                   <i className="fa-solid fa-user"></i> User Name
                 </label>
@@ -64,7 +64,7 @@ export default function SignUp() {
                 <input type="password" className="form-control mb-2" />
               </div>
 
-              <div className="form-group mt-5 ">
+              <div className="form-group mt-5 mb-5">
                 <label className="mb-2">
                   <i className="fa-solid fa-lock"></i> ReType Password{" "}
                 </label>
@@ -79,7 +79,7 @@ export default function SignUp() {
             Submit
           </button>
           <button type="submit" className="button mt-5 small ml-3">
-             <Link to="/login">
+             <Link to="/auth/login">
                   Login?
               </Link>
           </button>

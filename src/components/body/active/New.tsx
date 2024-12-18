@@ -1,10 +1,22 @@
+import { useState } from "react"
+
 export default function New() {
+  const [turnOnFan, setturnOnFan] = useState<boolean>(false)
+
+  const getContinute = () => {
+    setturnOnFan(true)
+    
+    setTimeout(() => {
+      setturnOnFan(false)
+    }, 5000)
+  }
+
   return (
-    <div className="alert alert-card">
+    <div className={`alert alert-card mt-5 ${turnOnFan ? "effect-fly-up" : ""}`}>
       <div className="row mt-4 mb-2">
         <div className="col medium">
           <h3 className=" mb-3 title">
-            <i className="fa-solid fa-square-up-right"></i> Lastest
+            <i className="fa-solid fa-square-up-right" onClick={getContinute}></i> Lastest
           </h3>
         </div>
       </div>

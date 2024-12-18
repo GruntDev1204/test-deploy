@@ -18,7 +18,7 @@
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-500px);
+    transform: translateY(-300vh);
   }
 }
 
@@ -86,11 +86,15 @@
   animation: rotateFan 0.1s ease-in-out infinite;
 }
 
+.effect-sida-fan {
+  animation: rotateFanMove 5s ease-in-out infinite;
+}
+
 @keyframes flySlowUpEffect {
   0% {
     transform: translateY(0);
   }
-  50%{
+  50% {
     transform: translateY(-50px);
   }
   100% {
@@ -98,6 +102,22 @@
   }
 }
 
+@keyframes rotateFanMove {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(50vw) rotate(180deg);
+  }
+  100% {
+    transform: translateX(100VW) rotate(360deg);
+  }
+}
+
 .effect-bunny {
   animation: flySlowUpEffect 5s ease-in-out infinite;
+}
+
+.effect-fly-up {
+  animation: flyUpEffect 5s ease-in-out infinite;
 }

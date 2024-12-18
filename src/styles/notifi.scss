@@ -54,11 +54,14 @@
   @include setCenterColumn;
   background-color: #35393b;
   .logo {
-    @include setSize(200px, 200px);
+    @include setSize(500px, 500px);
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     position: absolute;
-    animation: explodeEffect 5.5s ease-out infinite;
+    animation: rotateFan  1s ease-out infinite;
+    object-fit: cover;
   }
 }
+
+

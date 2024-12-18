@@ -1,7 +1,11 @@
+
 .body {
   @include setSize(100%, 100%);
+  margin-top: 100px;
+  margin-bottom: 50px;
+ 
   .slide-container {
-    @include setSize(100%, 100%);
+    @include setSize(auto, 100%);
     overflow: hidden;
     .slider {
       display: flex;
@@ -23,18 +27,17 @@
     background-color: #242628;
     margin-top: 50px;
     @include setCenterColumn;
-    @include setSize(100%, 100%);
+    @include setSize(auto, 100%);
     .row{
         @include setSize(100%, 100%);
     }
   }
   .alert-card{
-    background-color: #1c1c1d;
+    background-color: #242628;
     color: #ffffff ;
-    margin-top: 50px;
     cursor: pointer;
     @include setCenterColumn;
-    @include setSize(100%, 100%);
+    @include setSize(auto, 100%);
     .row{
         @include setSize(100%, 100%);
     }
@@ -48,9 +51,8 @@
 }
 
 .card-content{
-  @include setPadding(10px);
+  @include setPadding(15px);
   background: linear-gradient(to right top, #fc6c8f, #ff9a8b, #d76d97, #f18dab);
-  // border: 1px solid #0ad8fc;
   color: #000000;
   font-weight: 800;
   .header-card{

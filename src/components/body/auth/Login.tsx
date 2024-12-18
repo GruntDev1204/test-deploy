@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 export default function Login() {
   return (
-    <div className="alert alert-form form-login mt-5">
+    <div className="alert alert-form form-login">
       <div className="row mt-4 mb-2">
         <div className="col medium">
           <h3 className="text-center mb-3 title">
@@ -21,15 +21,16 @@ export default function Login() {
               We'll never share your email with anyone else.
             </small>
           </div>
-          <div className="form-group mt-5 ">
+          <div className="form-group mt-5  ">
             <label className="mb-2">Password </label>
             <input type="password" className="form-control mb-2" />
           </div>
+          
           <button type="submit" className="button mt-5 small">
             Login
           </button>
           <button type="submit" className="button mt-5 small ml-3">
-            <Link to="/sign-up">Register?</Link>
+            <Link to="/auth/sign-up">Register?</Link>
           </button>
         </div>
       </div>
